@@ -1,0 +1,2300 @@
+{
+  "date": "2026-09-07",
+  "seeds": [
+    42,
+    7,
+    21,
+    100,
+    2026
+  ],
+  "diseases": {
+    "diabetes": {
+      "model_name": "logistic_regression",
+      "class_counts": {
+        "0": 500,
+        "1": 268
+      },
+      "class_proportions": {
+        "0": 0.6510416666666666,
+        "1": 0.3489583333333333
+      },
+      "cross_validation": {
+        "per_seed": [
+          {
+            "accuracy": 0.7316696375519905,
+            "precision": 0.6065611989868482,
+            "recall": 0.686303284416492,
+            "f1": 0.6420529921399306,
+            "roc_auc": 0.8236359189378056
+          },
+          {
+            "accuracy": 0.7435022493846024,
+            "precision": 0.6183377093255256,
+            "recall": 0.6983228511530399,
+            "f1": 0.6522976014487546,
+            "roc_auc": 0.8284842767295597
+          },
+          {
+            "accuracy": 0.7369832781597487,
+            "precision": 0.6119606319606319,
+            "recall": 0.6865828092243186,
+            "f1": 0.6461946882420827,
+            "roc_auc": 0.8245485674353599
+          },
+          {
+            "accuracy": 0.7421526186232069,
+            "precision": 0.6172759727492674,
+            "recall": 0.7091544374563241,
+            "f1": 0.6580724577237265,
+            "roc_auc": 0.8221020265548568
+          },
+          {
+            "accuracy": 0.7356760886172651,
+            "precision": 0.6086195508421397,
+            "recall": 0.6864430468204052,
+            "f1": 0.6431998518742951,
+            "roc_auc": 0.8226429070580015
+          }
+        ],
+        "mean": {
+          "accuracy": 0.7379967744673628,
+          "precision": 0.6125510127728825,
+          "recall": 0.693361285814116,
+          "f1": 0.6483635182857579,
+          "roc_auc": 0.8242827393431167
+        },
+        "std": {
+          "accuracy": 0.004848368638992801,
+          "precision": 0.005183963623004356,
+          "recall": 0.010218438344331119,
+          "f1": 0.006725520986286171,
+          "roc_auc": 0.0025291557785759983
+        }
+      },
+      "final_split_candidate_comparison": {
+        "logistic_regression": {
+          "accuracy": 0.6948051948051948,
+          "precision": 0.559322033898305,
+          "recall": 0.6111111111111112,
+          "f1": 0.584070796460177,
+          "confusion_matrix": [
+            [
+              74,
+              26
+            ],
+            [
+              21,
+              33
+            ]
+          ],
+          "roc_auc": 0.7857407407407407
+        },
+        "random_forest": {
+          "accuracy": 0.7467532467532467,
+          "precision": 0.6271186440677966,
+          "recall": 0.6851851851851852,
+          "f1": 0.6548672566371682,
+          "confusion_matrix": [
+            [
+              78,
+              22
+            ],
+            [
+              17,
+              37
+            ]
+          ],
+          "roc_auc": 0.8198148148148148
+        },
+        "gradient_boosting": {
+          "accuracy": 0.7337662337662337,
+          "precision": 0.6326530612244898,
+          "recall": 0.5740740740740741,
+          "f1": 0.6019417475728155,
+          "confusion_matrix": [
+            [
+              82,
+              18
+            ],
+            [
+              23,
+              31
+            ]
+          ],
+          "roc_auc": 0.808888888888889
+        }
+      },
+      "robustness": {
+        "per_seed": [
+          {
+            "seed": 42,
+            "accuracy": 0.6948051948051948,
+            "precision": 0.559322033898305,
+            "recall": 0.6111111111111112,
+            "f1": 0.584070796460177,
+            "confusion_matrix": [
+              [
+                74,
+                26
+              ],
+              [
+                21,
+                33
+              ]
+            ],
+            "roc_auc": 0.7857407407407407,
+            "brier_score": 0.19194496929024438,
+            "expected_calibration_error": 0.1180075680117714,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.07587987349139216,
+                "observed_fraction_positive": 0.045454545454545456
+              },
+              {
+                "mean_predicted": 0.14809143049141896,
+                "observed_fraction_positive": 0.041666666666666664
+              },
+              {
+                "mean_predicted": 0.24761226780729656,
+                "observed_fraction_positive": 0.29411764705882354
+              },
+              {
+                "mean_predicted": 0.3364568384250196,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.4691884239886644,
+                "observed_fraction_positive": 0.5294117647058824
+              },
+              {
+                "mean_predicted": 0.5500235442441004,
+                "observed_fraction_positive": 0.16666666666666666
+              },
+              {
+                "mean_predicted": 0.6538755984810021,
+                "observed_fraction_positive": 0.5454545454545454
+              },
+              {
+                "mean_predicted": 0.74885745974447,
+                "observed_fraction_positive": 0.5
+              },
+              {
+                "mean_predicted": 0.8408527418543335,
+                "observed_fraction_positive": 0.75
+              },
+              {
+                "mean_predicted": 0.9388351826208718,
+                "observed_fraction_positive": 0.625
+              }
+            ]
+          },
+          {
+            "seed": 7,
+            "accuracy": 0.7532467532467533,
+            "precision": 0.6333333333333333,
+            "recall": 0.7037037037037037,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                78,
+                22
+              ],
+              [
+                16,
+                38
+              ]
+            ],
+            "roc_auc": 0.855,
+            "brier_score": 0.1551520940371222,
+            "expected_calibration_error": 0.09774148587906469,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.06518581073986318,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.15188827462600774,
+                "observed_fraction_positive": 0.030303030303030304
+              },
+              {
+                "mean_predicted": 0.2568239392858888,
+                "observed_fraction_positive": 0.23529411764705882
+              },
+              {
+                "mean_predicted": 0.35457153540208647,
+                "observed_fraction_positive": 0.3157894736842105
+              },
+              {
+                "mean_predicted": 0.45740786262797795,
+                "observed_fraction_positive": 0.38461538461538464
+              },
+              {
+                "mean_predicted": 0.555181138905922,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.6638057410991027,
+                "observed_fraction_positive": 0.375
+              },
+              {
+                "mean_predicted": 0.7414103301808946,
+                "observed_fraction_positive": 0.631578947368421
+              },
+              {
+                "mean_predicted": 0.8519201170187195,
+                "observed_fraction_positive": 0.9166666666666666
+              },
+              {
+                "mean_predicted": 0.9302336904777366,
+                "observed_fraction_positive": 0.8888888888888888
+              }
+            ]
+          },
+          {
+            "seed": 21,
+            "accuracy": 0.7402597402597403,
+            "precision": 0.625,
+            "recall": 0.6481481481481481,
+            "f1": 0.6363636363636364,
+            "confusion_matrix": [
+              [
+                79,
+                21
+              ],
+              [
+                19,
+                35
+              ]
+            ],
+            "roc_auc": 0.8257407407407408,
+            "brier_score": 0.16644486298687086,
+            "expected_calibration_error": 0.07428350881320274,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.07448606299601332,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.136345873390518,
+                "observed_fraction_positive": 0.03571428571428571
+              },
+              {
+                "mean_predicted": 0.24600455138617175,
+                "observed_fraction_positive": 0.20833333333333334
+              },
+              {
+                "mean_predicted": 0.34842202167618724,
+                "observed_fraction_positive": 0.3181818181818182
+              },
+              {
+                "mean_predicted": 0.4542815748453836,
+                "observed_fraction_positive": 0.42857142857142855
+              },
+              {
+                "mean_predicted": 0.5460196906003929,
+                "observed_fraction_positive": 0.46153846153846156
+              },
+              {
+                "mean_predicted": 0.6492717753911753,
+                "observed_fraction_positive": 0.4
+              },
+              {
+                "mean_predicted": 0.7474220710127008,
+                "observed_fraction_positive": 0.6428571428571429
+              },
+              {
+                "mean_predicted": 0.8535719356098034,
+                "observed_fraction_positive": 0.8181818181818182
+              },
+              {
+                "mean_predicted": 0.9379506870945582,
+                "observed_fraction_positive": 0.875
+              }
+            ]
+          },
+          {
+            "seed": 100,
+            "accuracy": 0.7207792207792207,
+            "precision": 0.6,
+            "recall": 0.6111111111111112,
+            "f1": 0.6055045871559633,
+            "confusion_matrix": [
+              [
+                78,
+                22
+              ],
+              [
+                21,
+                33
+              ]
+            ],
+            "roc_auc": 0.8264814814814815,
+            "brier_score": 0.1655671986989689,
+            "expected_calibration_error": 0.0978402540112024,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.07515341203069917,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.15598025430389023,
+                "observed_fraction_positive": 0.05
+              },
+              {
+                "mean_predicted": 0.2648742406621518,
+                "observed_fraction_positive": 0.10526315789473684
+              },
+              {
+                "mean_predicted": 0.3432079088946947,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.44923459639731733,
+                "observed_fraction_positive": 0.43478260869565216
+              },
+              {
+                "mean_predicted": 0.5490647528527155,
+                "observed_fraction_positive": 0.16666666666666666
+              },
+              {
+                "mean_predicted": 0.6486951952732937,
+                "observed_fraction_positive": 0.4444444444444444
+              },
+              {
+                "mean_predicted": 0.7536203546689147,
+                "observed_fraction_positive": 0.6875
+              },
+              {
+                "mean_predicted": 0.8643580621004583,
+                "observed_fraction_positive": 0.8333333333333334
+              },
+              {
+                "mean_predicted": 0.9147421065906575,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 2026,
+            "accuracy": 0.6558441558441559,
+            "precision": 0.5087719298245614,
+            "recall": 0.5370370370370371,
+            "f1": 0.5225225225225225,
+            "confusion_matrix": [
+              [
+                72,
+                28
+              ],
+              [
+                25,
+                29
+              ]
+            ],
+            "roc_auc": 0.7746296296296296,
+            "brier_score": 0.19824769505491538,
+            "expected_calibration_error": 0.13913374193258893,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.06773590091653277,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.13737717818117648,
+                "observed_fraction_positive": 0.09523809523809523
+              },
+              {
+                "mean_predicted": 0.2520843167923056,
+                "observed_fraction_positive": 0.2608695652173913
+              },
+              {
+                "mean_predicted": 0.3417145813946313,
+                "observed_fraction_positive": 0.42857142857142855
+              },
+              {
+                "mean_predicted": 0.4500676039852892,
+                "observed_fraction_positive": 0.6470588235294118
+              },
+              {
+                "mean_predicted": 0.5550894226722939,
+                "observed_fraction_positive": 0.25
+              },
+              {
+                "mean_predicted": 0.6607416896043804,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.7608996836176968,
+                "observed_fraction_positive": 0.5
+              },
+              {
+                "mean_predicted": 0.8363522567506563,
+                "observed_fraction_positive": 0.7142857142857143
+              },
+              {
+                "mean_predicted": 0.9503817297066876,
+                "observed_fraction_positive": 0.6666666666666666
+              }
+            ]
+          }
+        ],
+        "mean": {
+          "accuracy": 0.7129870129870131,
+          "precision": 0.5852854594112399,
+          "recall": 0.6222222222222223,
+          "f1": 0.6030256418337931,
+          "roc_auc": 0.8135185185185186
+        },
+        "std": {
+          "accuracy": 0.038798361678674426,
+          "precision": 0.05155283770444931,
+          "recall": 0.060858061945018437,
+          "f1": 0.0547900206993549,
+          "roc_auc": 0.03287128324241
+        },
+        "calibration_mean": {
+          "brier_score": 0.17547136401362434,
+          "expected_calibration_error": 0.10540131172956602
+        },
+        "calibration_std": {
+          "brier_score": 0.018591556351314077,
+          "expected_calibration_error": 0.024397513854266566
+        }
+      },
+      "zero_policy_sensitivity": {
+        "documented_zero_as_missing": {
+          "per_seed": [
+            {
+              "seed": 42,
+              "accuracy": 0.6948051948051948,
+              "precision": 0.559322033898305,
+              "recall": 0.6111111111111112,
+              "f1": 0.584070796460177,
+              "confusion_matrix": [
+                [
+                  74,
+                  26
+                ],
+                [
+                  21,
+                  33
+                ]
+              ],
+              "roc_auc": 0.7857407407407407,
+              "brier_score": 0.19194496929024438,
+              "expected_calibration_error": 0.1180075680117714,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.07587987349139216,
+                  "observed_fraction_positive": 0.045454545454545456
+                },
+                {
+                  "mean_predicted": 0.14809143049141896,
+                  "observed_fraction_positive": 0.041666666666666664
+                },
+                {
+                  "mean_predicted": 0.24761226780729656,
+                  "observed_fraction_positive": 0.29411764705882354
+                },
+                {
+                  "mean_predicted": 0.3364568384250196,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.4691884239886644,
+                  "observed_fraction_positive": 0.5294117647058824
+                },
+                {
+                  "mean_predicted": 0.5500235442441004,
+                  "observed_fraction_positive": 0.16666666666666666
+                },
+                {
+                  "mean_predicted": 0.6538755984810021,
+                  "observed_fraction_positive": 0.5454545454545454
+                },
+                {
+                  "mean_predicted": 0.74885745974447,
+                  "observed_fraction_positive": 0.5
+                },
+                {
+                  "mean_predicted": 0.8408527418543335,
+                  "observed_fraction_positive": 0.75
+                },
+                {
+                  "mean_predicted": 0.9388351826208718,
+                  "observed_fraction_positive": 0.625
+                }
+              ]
+            },
+            {
+              "seed": 7,
+              "accuracy": 0.7532467532467533,
+              "precision": 0.6333333333333333,
+              "recall": 0.7037037037037037,
+              "f1": 0.6666666666666666,
+              "confusion_matrix": [
+                [
+                  78,
+                  22
+                ],
+                [
+                  16,
+                  38
+                ]
+              ],
+              "roc_auc": 0.855,
+              "brier_score": 0.1551520940371222,
+              "expected_calibration_error": 0.09774148587906469,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.06518581073986318,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.15188827462600774,
+                  "observed_fraction_positive": 0.030303030303030304
+                },
+                {
+                  "mean_predicted": 0.2568239392858888,
+                  "observed_fraction_positive": 0.23529411764705882
+                },
+                {
+                  "mean_predicted": 0.35457153540208647,
+                  "observed_fraction_positive": 0.3157894736842105
+                },
+                {
+                  "mean_predicted": 0.45740786262797795,
+                  "observed_fraction_positive": 0.38461538461538464
+                },
+                {
+                  "mean_predicted": 0.555181138905922,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.6638057410991027,
+                  "observed_fraction_positive": 0.375
+                },
+                {
+                  "mean_predicted": 0.7414103301808946,
+                  "observed_fraction_positive": 0.631578947368421
+                },
+                {
+                  "mean_predicted": 0.8519201170187195,
+                  "observed_fraction_positive": 0.9166666666666666
+                },
+                {
+                  "mean_predicted": 0.9302336904777366,
+                  "observed_fraction_positive": 0.8888888888888888
+                }
+              ]
+            },
+            {
+              "seed": 21,
+              "accuracy": 0.7402597402597403,
+              "precision": 0.625,
+              "recall": 0.6481481481481481,
+              "f1": 0.6363636363636364,
+              "confusion_matrix": [
+                [
+                  79,
+                  21
+                ],
+                [
+                  19,
+                  35
+                ]
+              ],
+              "roc_auc": 0.8257407407407408,
+              "brier_score": 0.16644486298687086,
+              "expected_calibration_error": 0.07428350881320274,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.07448606299601332,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.136345873390518,
+                  "observed_fraction_positive": 0.03571428571428571
+                },
+                {
+                  "mean_predicted": 0.24600455138617175,
+                  "observed_fraction_positive": 0.20833333333333334
+                },
+                {
+                  "mean_predicted": 0.34842202167618724,
+                  "observed_fraction_positive": 0.3181818181818182
+                },
+                {
+                  "mean_predicted": 0.4542815748453836,
+                  "observed_fraction_positive": 0.42857142857142855
+                },
+                {
+                  "mean_predicted": 0.5460196906003929,
+                  "observed_fraction_positive": 0.46153846153846156
+                },
+                {
+                  "mean_predicted": 0.6492717753911753,
+                  "observed_fraction_positive": 0.4
+                },
+                {
+                  "mean_predicted": 0.7474220710127008,
+                  "observed_fraction_positive": 0.6428571428571429
+                },
+                {
+                  "mean_predicted": 0.8535719356098034,
+                  "observed_fraction_positive": 0.8181818181818182
+                },
+                {
+                  "mean_predicted": 0.9379506870945582,
+                  "observed_fraction_positive": 0.875
+                }
+              ]
+            },
+            {
+              "seed": 100,
+              "accuracy": 0.7207792207792207,
+              "precision": 0.6,
+              "recall": 0.6111111111111112,
+              "f1": 0.6055045871559633,
+              "confusion_matrix": [
+                [
+                  78,
+                  22
+                ],
+                [
+                  21,
+                  33
+                ]
+              ],
+              "roc_auc": 0.8264814814814815,
+              "brier_score": 0.1655671986989689,
+              "expected_calibration_error": 0.0978402540112024,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.07515341203069917,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.15598025430389023,
+                  "observed_fraction_positive": 0.05
+                },
+                {
+                  "mean_predicted": 0.2648742406621518,
+                  "observed_fraction_positive": 0.10526315789473684
+                },
+                {
+                  "mean_predicted": 0.3432079088946947,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.44923459639731733,
+                  "observed_fraction_positive": 0.43478260869565216
+                },
+                {
+                  "mean_predicted": 0.5490647528527155,
+                  "observed_fraction_positive": 0.16666666666666666
+                },
+                {
+                  "mean_predicted": 0.6486951952732937,
+                  "observed_fraction_positive": 0.4444444444444444
+                },
+                {
+                  "mean_predicted": 0.7536203546689147,
+                  "observed_fraction_positive": 0.6875
+                },
+                {
+                  "mean_predicted": 0.8643580621004583,
+                  "observed_fraction_positive": 0.8333333333333334
+                },
+                {
+                  "mean_predicted": 0.9147421065906575,
+                  "observed_fraction_positive": 1.0
+                }
+              ]
+            },
+            {
+              "seed": 2026,
+              "accuracy": 0.6558441558441559,
+              "precision": 0.5087719298245614,
+              "recall": 0.5370370370370371,
+              "f1": 0.5225225225225225,
+              "confusion_matrix": [
+                [
+                  72,
+                  28
+                ],
+                [
+                  25,
+                  29
+                ]
+              ],
+              "roc_auc": 0.7746296296296296,
+              "brier_score": 0.19824769505491538,
+              "expected_calibration_error": 0.13913374193258893,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.06773590091653277,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.13737717818117648,
+                  "observed_fraction_positive": 0.09523809523809523
+                },
+                {
+                  "mean_predicted": 0.2520843167923056,
+                  "observed_fraction_positive": 0.2608695652173913
+                },
+                {
+                  "mean_predicted": 0.3417145813946313,
+                  "observed_fraction_positive": 0.42857142857142855
+                },
+                {
+                  "mean_predicted": 0.4500676039852892,
+                  "observed_fraction_positive": 0.6470588235294118
+                },
+                {
+                  "mean_predicted": 0.5550894226722939,
+                  "observed_fraction_positive": 0.25
+                },
+                {
+                  "mean_predicted": 0.6607416896043804,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.7608996836176968,
+                  "observed_fraction_positive": 0.5
+                },
+                {
+                  "mean_predicted": 0.8363522567506563,
+                  "observed_fraction_positive": 0.7142857142857143
+                },
+                {
+                  "mean_predicted": 0.9503817297066876,
+                  "observed_fraction_positive": 0.6666666666666666
+                }
+              ]
+            }
+          ],
+          "mean": {
+            "accuracy": 0.7129870129870131,
+            "precision": 0.5852854594112399,
+            "recall": 0.6222222222222223,
+            "f1": 0.6030256418337931,
+            "roc_auc": 0.8135185185185186
+          },
+          "std": {
+            "accuracy": 0.038798361678674426,
+            "precision": 0.05155283770444931,
+            "recall": 0.060858061945018437,
+            "f1": 0.0547900206993549,
+            "roc_auc": 0.03287128324241
+          },
+          "calibration_mean": {
+            "brier_score": 0.17547136401362434,
+            "expected_calibration_error": 0.10540131172956602
+          },
+          "calibration_std": {
+            "brier_score": 0.018591556351314077,
+            "expected_calibration_error": 0.024397513854266566
+          }
+        },
+        "raw_zero_retained": {
+          "per_seed": [
+            {
+              "seed": 42,
+              "accuracy": 0.6883116883116883,
+              "precision": 0.546875,
+              "recall": 0.6481481481481481,
+              "f1": 0.5932203389830508,
+              "confusion_matrix": [
+                [
+                  71,
+                  29
+                ],
+                [
+                  19,
+                  35
+                ]
+              ],
+              "roc_auc": 0.7996296296296297,
+              "brier_score": 0.18520734438071582,
+              "expected_calibration_error": 0.13497086150561205,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.0517677678956091,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.1441029350597125,
+                  "observed_fraction_positive": 0.034482758620689655
+                },
+                {
+                  "mean_predicted": 0.2445434434771679,
+                  "observed_fraction_positive": 0.15
+                },
+                {
+                  "mean_predicted": 0.33415243324991895,
+                  "observed_fraction_positive": 0.4117647058823529
+                },
+                {
+                  "mean_predicted": 0.44860026163964467,
+                  "observed_fraction_positive": 0.5333333333333333
+                },
+                {
+                  "mean_predicted": 0.5447883872185157,
+                  "observed_fraction_positive": 0.23076923076923078
+                },
+                {
+                  "mean_predicted": 0.6486419710856353,
+                  "observed_fraction_positive": 0.5454545454545454
+                },
+                {
+                  "mean_predicted": 0.7487534138398252,
+                  "observed_fraction_positive": 0.5625
+                },
+                {
+                  "mean_predicted": 0.8586789018919428,
+                  "observed_fraction_positive": 0.75
+                },
+                {
+                  "mean_predicted": 0.9298193253707362,
+                  "observed_fraction_positive": 0.6666666666666666
+                }
+              ]
+            },
+            {
+              "seed": 7,
+              "accuracy": 0.7727272727272727,
+              "precision": 0.6610169491525424,
+              "recall": 0.7222222222222222,
+              "f1": 0.6902654867256637,
+              "confusion_matrix": [
+                [
+                  80,
+                  20
+                ],
+                [
+                  15,
+                  39
+                ]
+              ],
+              "roc_auc": 0.8581481481481482,
+              "brier_score": 0.1541003848688744,
+              "expected_calibration_error": 0.11999576918475416,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.06644785292454856,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.15810368501638666,
+                  "observed_fraction_positive": 0.04
+                },
+                {
+                  "mean_predicted": 0.24301375259922944,
+                  "observed_fraction_positive": 0.18181818181818182
+                },
+                {
+                  "mean_predicted": 0.3503322528234958,
+                  "observed_fraction_positive": 0.22727272727272727
+                },
+                {
+                  "mean_predicted": 0.4551927488508978,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.5584723927747354,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.6617750680090326,
+                  "observed_fraction_positive": 0.5
+                },
+                {
+                  "mean_predicted": 0.7546793382306242,
+                  "observed_fraction_positive": 0.8
+                },
+                {
+                  "mean_predicted": 0.8481508444639235,
+                  "observed_fraction_positive": 1.0
+                },
+                {
+                  "mean_predicted": 0.9374821921097123,
+                  "observed_fraction_positive": 0.75
+                }
+              ]
+            },
+            {
+              "seed": 21,
+              "accuracy": 0.7337662337662337,
+              "precision": 0.6101694915254238,
+              "recall": 0.6666666666666666,
+              "f1": 0.6371681415929203,
+              "confusion_matrix": [
+                [
+                  77,
+                  23
+                ],
+                [
+                  18,
+                  36
+                ]
+              ],
+              "roc_auc": 0.8207407407407408,
+              "brier_score": 0.16946577108359015,
+              "expected_calibration_error": 0.08763926106963454,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.04746352253741713,
+                  "observed_fraction_positive": 0.1111111111111111
+                },
+                {
+                  "mean_predicted": 0.1462987012425522,
+                  "observed_fraction_positive": 0.03333333333333333
+                },
+                {
+                  "mean_predicted": 0.2500056634705322,
+                  "observed_fraction_positive": 0.13636363636363635
+                },
+                {
+                  "mean_predicted": 0.34320120774048996,
+                  "observed_fraction_positive": 0.3333333333333333
+                },
+                {
+                  "mean_predicted": 0.4476173199287587,
+                  "observed_fraction_positive": 0.46153846153846156
+                },
+                {
+                  "mean_predicted": 0.5457032386288471,
+                  "observed_fraction_positive": 0.4166666666666667
+                },
+                {
+                  "mean_predicted": 0.6505927668669245,
+                  "observed_fraction_positive": 0.4
+                },
+                {
+                  "mean_predicted": 0.7469965094025609,
+                  "observed_fraction_positive": 0.6923076923076923
+                },
+                {
+                  "mean_predicted": 0.8434967944678116,
+                  "observed_fraction_positive": 0.8333333333333334
+                },
+                {
+                  "mean_predicted": 0.9294407925798156,
+                  "observed_fraction_positive": 0.8571428571428571
+                }
+              ]
+            },
+            {
+              "seed": 100,
+              "accuracy": 0.7402597402597403,
+              "precision": 0.6206896551724138,
+              "recall": 0.6666666666666666,
+              "f1": 0.6428571428571429,
+              "confusion_matrix": [
+                [
+                  78,
+                  22
+                ],
+                [
+                  18,
+                  36
+                ]
+              ],
+              "roc_auc": 0.8325925925925926,
+              "brier_score": 0.16625356301265456,
+              "expected_calibration_error": 0.110880157955492,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.055177214814719065,
+                  "observed_fraction_positive": 0.0
+                },
+                {
+                  "mean_predicted": 0.14289795121541596,
+                  "observed_fraction_positive": 0.045454545454545456
+                },
+                {
+                  "mean_predicted": 0.25119216034918557,
+                  "observed_fraction_positive": 0.09523809523809523
+                },
+                {
+                  "mean_predicted": 0.343326521726059,
+                  "observed_fraction_positive": 0.25
+                },
+                {
+                  "mean_predicted": 0.4468119148590297,
+                  "observed_fraction_positive": 0.375
+                },
+                {
+                  "mean_predicted": 0.551664649437979,
+                  "observed_fraction_positive": 0.2857142857142857
+                },
+                {
+                  "mean_predicted": 0.6541584539947153,
+                  "observed_fraction_positive": 0.5384615384615384
+                },
+                {
+                  "mean_predicted": 0.740310850600214,
+                  "observed_fraction_positive": 0.6666666666666666
+                },
+                {
+                  "mean_predicted": 0.8605691479155542,
+                  "observed_fraction_positive": 0.9230769230769231
+                },
+                {
+                  "mean_predicted": 0.9090277837353398,
+                  "observed_fraction_positive": 1.0
+                }
+              ]
+            },
+            {
+              "seed": 2026,
+              "accuracy": 0.6623376623376623,
+              "precision": 0.5172413793103449,
+              "recall": 0.5555555555555556,
+              "f1": 0.5357142857142857,
+              "confusion_matrix": [
+                [
+                  72,
+                  28
+                ],
+                [
+                  24,
+                  30
+                ]
+              ],
+              "roc_auc": 0.7533333333333333,
+              "brier_score": 0.20383231039107588,
+              "expected_calibration_error": 0.15200961785304826,
+              "calibration_curve": [
+                {
+                  "mean_predicted": 0.06015336190978734,
+                  "observed_fraction_positive": 0.1
+                },
+                {
+                  "mean_predicted": 0.13870466550198401,
+                  "observed_fraction_positive": 0.08333333333333333
+                },
+                {
+                  "mean_predicted": 0.25292354665547806,
+                  "observed_fraction_positive": 0.13636363636363635
+                },
+                {
+                  "mean_predicted": 0.349976810302886,
+                  "observed_fraction_positive": 0.55
+                },
+                {
+                  "mean_predicted": 0.4425073427839255,
+                  "observed_fraction_positive": 0.6
+                },
+                {
+                  "mean_predicted": 0.5450031523782601,
+                  "observed_fraction_positive": 0.4444444444444444
+                },
+                {
+                  "mean_predicted": 0.6442736691269081,
+                  "observed_fraction_positive": 0.25
+                },
+                {
+                  "mean_predicted": 0.7537560687981983,
+                  "observed_fraction_positive": 0.5789473684210527
+                },
+                {
+                  "mean_predicted": 0.8542654361903412,
+                  "observed_fraction_positive": 0.6
+                },
+                {
+                  "mean_predicted": 0.9554494941247003,
+                  "observed_fraction_positive": 0.75
+                }
+              ]
+            }
+          ],
+          "mean": {
+            "accuracy": 0.7194805194805195,
+            "precision": 0.5911984950321449,
+            "recall": 0.6518518518518517,
+            "f1": 0.6198450791746126,
+            "roc_auc": 0.812888888888889
+          },
+          "std": {
+            "accuracy": 0.04389725657443005,
+            "precision": 0.058177467605339546,
+            "recall": 0.06057565642146712,
+            "f1": 0.05825706945226883,
+            "roc_auc": 0.039436531983298
+          },
+          "calibration_mean": {
+            "brier_score": 0.17577187474738215,
+            "expected_calibration_error": 0.1210991335137082
+          },
+          "calibration_std": {
+            "brier_score": 0.019212201923306756,
+            "expected_calibration_error": 0.02435718999520195
+          }
+        }
+      }
+    },
+    "heart_disease": {
+      "model_name": "logistic_regression",
+      "class_counts": {
+        "0": 164,
+        "1": 139
+      },
+      "class_proportions": {
+        "0": 0.5412541254125413,
+        "1": 0.45874587458745875
+      },
+      "cross_validation": {
+        "per_seed": [
+          {
+            "accuracy": 0.8446994535519124,
+            "precision": 0.8475270655270656,
+            "recall": 0.8050264550264551,
+            "f1": 0.8245544748993024,
+            "roc_auc": 0.9188041125541127
+          },
+          {
+            "accuracy": 0.8515846994535519,
+            "precision": 0.8522710073534661,
+            "recall": 0.8211640211640212,
+            "f1": 0.8338616083037989,
+            "roc_auc": 0.9103049342632676
+          },
+          {
+            "accuracy": 0.8346448087431695,
+            "precision": 0.8353001277139208,
+            "recall": 0.8047619047619048,
+            "f1": 0.8161953941078937,
+            "roc_auc": 0.9176489598364599
+          },
+          {
+            "accuracy": 0.838415300546448,
+            "precision": 0.8386399466407954,
+            "recall": 0.8068783068783068,
+            "f1": 0.8148999575973972,
+            "roc_auc": 0.9164925545133877
+          },
+          {
+            "accuracy": 0.8448633879781422,
+            "precision": 0.8376665403561955,
+            "recall": 0.8198412698412698,
+            "f1": 0.8281340142809854,
+            "roc_auc": 0.9038407387365721
+          }
+        ],
+        "mean": {
+          "accuracy": 0.8428415300546448,
+          "precision": 0.8422809375182888,
+          "recall": 0.8115343915343916,
+          "f1": 0.8235290898378755,
+          "roc_auc": 0.91341825998076
+        },
+        "std": {
+          "accuracy": 0.006533768978157234,
+          "precision": 0.00725611010908179,
+          "recall": 0.008240645196351357,
+          "f1": 0.00801970538397783,
+          "roc_auc": 0.0062805100567215645
+        }
+      },
+      "final_split_candidate_comparison": {
+        "logistic_regression": {
+          "accuracy": 0.8688524590163934,
+          "precision": 0.8125,
+          "recall": 0.9285714285714286,
+          "f1": 0.8666666666666667,
+          "confusion_matrix": [
+            [
+              27,
+              6
+            ],
+            [
+              2,
+              26
+            ]
+          ],
+          "roc_auc": 0.9664502164502166
+        },
+        "random_forest": {
+          "accuracy": 0.8852459016393442,
+          "precision": 0.8181818181818182,
+          "recall": 0.9642857142857143,
+          "f1": 0.8852459016393442,
+          "confusion_matrix": [
+            [
+              27,
+              6
+            ],
+            [
+              1,
+              27
+            ]
+          ],
+          "roc_auc": 0.9458874458874459
+        },
+        "gradient_boosting": {
+          "accuracy": 0.8688524590163934,
+          "precision": 0.8125,
+          "recall": 0.9285714285714286,
+          "f1": 0.8666666666666667,
+          "confusion_matrix": [
+            [
+              27,
+              6
+            ],
+            [
+              2,
+              26
+            ]
+          ],
+          "roc_auc": 0.948051948051948
+        }
+      },
+      "robustness": {
+        "per_seed": [
+          {
+            "seed": 42,
+            "accuracy": 0.8688524590163934,
+            "precision": 0.8125,
+            "recall": 0.9285714285714286,
+            "f1": 0.8666666666666667,
+            "confusion_matrix": [
+              [
+                27,
+                6
+              ],
+              [
+                2,
+                26
+              ]
+            ],
+            "roc_auc": 0.9664502164502166,
+            "brier_score": 0.08319487694332521,
+            "expected_calibration_error": 0.09754276929102289,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.03990930045724132,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.1318607439440379,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.251005577777098,
+                "observed_fraction_positive": 0.25
+              },
+              {
+                "mean_predicted": 0.3729517136835182,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.4797724157518153,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.5439490293515762,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.6382198719654543,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.7492918373610905,
+                "observed_fraction_positive": 0.6666666666666666
+              },
+              {
+                "mean_predicted": 0.8610070288611326,
+                "observed_fraction_positive": 0.8
+              },
+              {
+                "mean_predicted": 0.9643967163770265,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 7,
+            "accuracy": 0.9180327868852459,
+            "precision": 0.9259259259259259,
+            "recall": 0.8928571428571429,
+            "f1": 0.9090909090909091,
+            "confusion_matrix": [
+              [
+                31,
+                2
+              ],
+              [
+                3,
+                25
+              ]
+            ],
+            "roc_auc": 0.9458874458874459,
+            "brier_score": 0.08307098995313475,
+            "expected_calibration_error": 0.08459177071471857,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.047910300551344064,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.14974593286394455,
+                "observed_fraction_positive": 0.125
+              },
+              {
+                "mean_predicted": 0.2470160338045502,
+                "observed_fraction_positive": 0.14285714285714285
+              },
+              {
+                "mean_predicted": 0.3720769968105257,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.46295292878134237,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.594650663958607,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.681473601450659,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.7394299588510491,
+                "observed_fraction_positive": 0.8
+              },
+              {
+                "mean_predicted": 0.8319222700801363,
+                "observed_fraction_positive": 0.75
+              },
+              {
+                "mean_predicted": 0.9687290350988704,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 21,
+            "accuracy": 0.8360655737704918,
+            "precision": 0.8461538461538461,
+            "recall": 0.7857142857142857,
+            "f1": 0.8148148148148148,
+            "confusion_matrix": [
+              [
+                29,
+                4
+              ],
+              [
+                6,
+                22
+              ]
+            ],
+            "roc_auc": 0.9112554112554112,
+            "brier_score": 0.11704594938500318,
+            "expected_calibration_error": 0.13766400188313035,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.04555561761023495,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.13783039727257757,
+                "observed_fraction_positive": 0.6
+              },
+              {
+                "mean_predicted": 0.22654905609666143,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.3295145325157254,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.44429555555647726,
+                "observed_fraction_positive": 0.2
+              },
+              {
+                "mean_predicted": 0.5312220496507071,
+                "observed_fraction_positive": 0.25
+              },
+              {
+                "mean_predicted": 0.750629773294962,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8350904162580579,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9494963978671941,
+                "observed_fraction_positive": 0.9285714285714286
+              }
+            ]
+          },
+          {
+            "seed": 100,
+            "accuracy": 0.7868852459016393,
+            "precision": 0.7777777777777778,
+            "recall": 0.75,
+            "f1": 0.7636363636363637,
+            "confusion_matrix": [
+              [
+                27,
+                6
+              ],
+              [
+                7,
+                21
+              ]
+            ],
+            "roc_auc": 0.8961038961038961,
+            "brier_score": 0.12830876356888926,
+            "expected_calibration_error": 0.09460157368521943,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.05906545074149367,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.13987709702732512,
+                "observed_fraction_positive": 0.16666666666666666
+              },
+              {
+                "mean_predicted": 0.2655783788714034,
+                "observed_fraction_positive": 0.6666666666666666
+              },
+              {
+                "mean_predicted": 0.34533548968784517,
+                "observed_fraction_positive": 0.25
+              },
+              {
+                "mean_predicted": 0.45265194428109545,
+                "observed_fraction_positive": 0.42857142857142855
+              },
+              {
+                "mean_predicted": 0.5668894868864649,
+                "observed_fraction_positive": 0.2
+              },
+              {
+                "mean_predicted": 0.7442205509165233,
+                "observed_fraction_positive": 0.7142857142857143
+              },
+              {
+                "mean_predicted": 0.8451139056233213,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9788549928254795,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 2026,
+            "accuracy": 0.9180327868852459,
+            "precision": 0.96,
+            "recall": 0.8571428571428571,
+            "f1": 0.9056603773584906,
+            "confusion_matrix": [
+              [
+                32,
+                1
+              ],
+              [
+                4,
+                24
+              ]
+            ],
+            "roc_auc": 0.974025974025974,
+            "brier_score": 0.06628406638826662,
+            "expected_calibration_error": 0.09543452715449494,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.061498245283527625,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.14632084889441385,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.2598595550605148,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.34692542049900643,
+                "observed_fraction_positive": 0.5
+              },
+              {
+                "mean_predicted": 0.45094432112333666,
+                "observed_fraction_positive": 0.3333333333333333
+              },
+              {
+                "mean_predicted": 0.6848914791742201,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.7510649626491404,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8377372664194016,
+                "observed_fraction_positive": 0.75
+              },
+              {
+                "mean_predicted": 0.970154295952316,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          }
+        ],
+        "mean": {
+          "accuracy": 0.8655737704918034,
+          "precision": 0.86447150997151,
+          "recall": 0.8428571428571429,
+          "f1": 0.8519738263134491,
+          "roc_auc": 0.9387445887445887
+        },
+        "std": {
+          "accuracy": 0.05607420123438384,
+          "precision": 0.07657466210430829,
+          "recall": 0.07405871911902759,
+          "f1": 0.06233936539929103,
+          "roc_auc": 0.03404879553673373
+        },
+        "calibration_mean": {
+          "brier_score": 0.0955809292477238,
+          "expected_calibration_error": 0.10196692854571723
+        },
+        "calibration_std": {
+          "brier_score": 0.025981133900846724,
+          "expected_calibration_error": 0.020571041902251598
+        }
+      }
+    },
+    "ckd": {
+      "model_name": "random_forest",
+      "class_counts": {
+        "0": 149,
+        "1": 248
+      },
+      "class_proportions": {
+        "0": 0.37531486146095716,
+        "1": 0.6246851385390428
+      },
+      "cross_validation": {
+        "per_seed": [
+          {
+            "accuracy": 0.9899050632911394,
+            "precision": 0.9920784313725491,
+            "recall": 0.992,
+            "f1": 0.9919179673069347,
+            "roc_auc": 0.9998666666666667
+          },
+          {
+            "accuracy": 0.9898734177215189,
+            "precision": 0.9882352941176471,
+            "recall": 0.9959183673469388,
+            "f1": 0.992,
+            "roc_auc": 0.9985034013605443
+          },
+          {
+            "accuracy": 0.9874050632911393,
+            "precision": 0.9920784313725491,
+            "recall": 0.9879183673469388,
+            "f1": 0.9899377442898929,
+            "roc_auc": 0.9998620689655173
+          },
+          {
+            "accuracy": 0.9898734177215189,
+            "precision": 0.9884615384615385,
+            "recall": 0.9959183673469388,
+            "f1": 0.991997550270491,
+            "roc_auc": 1.0
+          },
+          {
+            "accuracy": 0.9924367088607594,
+            "precision": 0.9920784313725491,
+            "recall": 0.9959183673469388,
+            "f1": 0.993937744289893,
+            "roc_auc": 0.9998666666666667
+          }
+        ],
+        "mean": {
+          "accuracy": 0.9898987341772152,
+          "precision": 0.9905864253393666,
+          "recall": 0.993534693877551,
+          "f1": 0.9919582012314423,
+          "roc_auc": 0.999619760731879
+        },
+        "std": {
+          "accuracy": 0.0017791171887986304,
+          "precision": 0.0020445787019866446,
+          "recall": 0.003568757018285254,
+          "f1": 0.0014147218123648762,
+          "roc_auc": 0.0006267931294182598
+        }
+      },
+      "final_split_candidate_comparison": {
+        "logistic_regression": {
+          "accuracy": 0.9875,
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1": 0.98989898989899,
+          "confusion_matrix": [
+            [
+              30,
+              0
+            ],
+            [
+              1,
+              49
+            ]
+          ],
+          "roc_auc": 1.0
+        },
+        "random_forest": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion_matrix": [
+            [
+              30,
+              0
+            ],
+            [
+              0,
+              50
+            ]
+          ],
+          "roc_auc": 1.0
+        },
+        "gradient_boosting": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion_matrix": [
+            [
+              30,
+              0
+            ],
+            [
+              0,
+              50
+            ]
+          ],
+          "roc_auc": 1.0
+        }
+      },
+      "robustness": {
+        "per_seed": [
+          {
+            "seed": 42,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                30,
+                0
+              ],
+              [
+                0,
+                50
+              ]
+            ],
+            "roc_auc": 1.0,
+            "brier_score": 0.004738194444444443,
+            "expected_calibration_error": 0.03504166666666668,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.011149425287356319,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.2633333333333333,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.7744444444444444,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8683333333333333,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9817073170731706,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 7,
+            "accuracy": 0.975,
+            "precision": 0.9615384615384616,
+            "recall": 1.0,
+            "f1": 0.9803921568627451,
+            "confusion_matrix": [
+              [
+                28,
+                2
+              ],
+              [
+                0,
+                50
+              ]
+            ],
+            "roc_auc": 1.0,
+            "brier_score": 0.013125833333333333,
+            "expected_calibration_error": 0.046083333333333254,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.010533333333333332,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.15,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.5800000000000001,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.66,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.75,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8613333333333333,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9876744186046514,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 21,
+            "accuracy": 0.9875,
+            "precision": 1.0,
+            "recall": 0.98,
+            "f1": 0.98989898989899,
+            "confusion_matrix": [
+              [
+                30,
+                0
+              ],
+              [
+                1,
+                49
+              ]
+            ],
+            "roc_auc": 1.0,
+            "brier_score": 0.01062638888888889,
+            "expected_calibration_error": 0.04541666666666672,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.016296296296296295,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.145,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.35,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.4266666666666667,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.6433333333333333,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.7333333333333333,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8474999999999999,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9826356589147288,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 100,
+            "accuracy": 0.9875,
+            "precision": 1.0,
+            "recall": 0.98,
+            "f1": 0.98989898989899,
+            "confusion_matrix": [
+              [
+                30,
+                0
+              ],
+              [
+                1,
+                49
+              ]
+            ],
+            "roc_auc": 1.0,
+            "brier_score": 0.01308597222222222,
+            "expected_calibration_error": 0.05229166666666672,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.020000000000000004,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.13916666666666666,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.33,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.6416666666666666,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.7733333333333334,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8533333333333333,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9822222222222221,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          },
+          {
+            "seed": 2026,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                30,
+                0
+              ],
+              [
+                0,
+                50
+              ]
+            ],
+            "roc_auc": 1.0,
+            "brier_score": 0.005609166666666667,
+            "expected_calibration_error": 0.03691666666666671,
+            "calibration_curve": [
+              {
+                "mean_predicted": 0.012758620689655175,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.11333333333333333,
+                "observed_fraction_positive": 0.0
+              },
+              {
+                "mean_predicted": 0.66,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.7622222222222222,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.8441666666666666,
+                "observed_fraction_positive": 1.0
+              },
+              {
+                "mean_predicted": 0.9811111111111112,
+                "observed_fraction_positive": 1.0
+              }
+            ]
+          }
+        ],
+        "mean": {
+          "accuracy": 0.99,
+          "precision": 0.9923076923076923,
+          "recall": 0.992,
+          "f1": 0.9920380273321451,
+          "roc_auc": 1.0
+        },
+        "std": {
+          "accuracy": 0.010458250331675948,
+          "precision": 0.017200522903844526,
+          "recall": 0.010954451150103331,
+          "f1": 0.00823958856373088,
+          "roc_auc": 0.0
+        },
+        "calibration_mean": {
+          "brier_score": 0.00943711111111111,
+          "expected_calibration_error": 0.04315000000000002
+        },
+        "calibration_std": {
+          "brier_score": 0.004033243644501345,
+          "expected_calibration_error": 0.007104783697544135
+        }
+      },
+      "dropped_rows": [
+        {
+          "line": 99,
+          "field_count": 26,
+          "reason": "field count differs from 25 declared attributes"
+        },
+        {
+          "line": 102,
+          "field_count": 26,
+          "reason": "field count differs from 25 declared attributes"
+        },
+        {
+          "line": 399,
+          "field_count": 26,
+          "reason": "field count differs from 25 declared attributes"
+        }
+      ],
+      "diagnostics": {
+        "class_counts": {
+          "0": 149,
+          "1": 248
+        },
+        "feature_duplicate_rows": 0,
+        "top_model_features": [
+          {
+            "feature": "numeric__hemo",
+            "importance": 0.19384296573287907,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "numeric__sc",
+            "importance": 0.1350547444160546,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "numeric__pcv",
+            "importance": 0.13427836391645176,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "categorical__al_0",
+            "importance": 0.07300976103841482,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "numeric__rbcc",
+            "importance": 0.07295583052835998,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "categorical__htn_yes",
+            "importance": 0.05432015819876188,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "categorical__htn_no",
+            "importance": 0.03896158515764671,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "categorical__dm_no",
+            "importance": 0.03230217424974157,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "categorical__dm_yes",
+            "importance": 0.030934065409481425,
+            "method": "feature_importances_"
+          },
+          {
+            "feature": "numeric__bgr",
+            "importance": 0.030480142964358775,
+            "method": "feature_importances_"
+          }
+        ],
+        "numeric_separation": {
+          "age": 0.6700990474128599,
+          "bp": 0.666621563108898,
+          "bgr": 0.7353052608789781,
+          "bu": 0.7487686728729162,
+          "sc": 0.9218986793678285,
+          "sod": 0.22207187702966008,
+          "pot": 0.4886339034423035,
+          "hemo": 0.030823771379086387,
+          "pcv": 0.04440896297899978,
+          "wbcc": 0.5990744749945875,
+          "rbcc": 0.13955942844771596
+        },
+        "categorical_separation": {
+          "sg": {
+            "1.005": {
+              "count": 7,
+              "positive_rate": 1.0
+            },
+            "1.010": {
+              "count": 83,
+              "positive_rate": 1.0
+            },
+            "1.015": {
+              "count": 74,
+              "positive_rate": 1.0
+            },
+            "1.020": {
+              "count": 105,
+              "positive_rate": 0.29523809523809524
+            },
+            "1.025": {
+              "count": 81,
+              "positive_rate": 0.13580246913580246
+            },
+            "<missing>": {
+              "count": 47,
+              "positive_rate": 0.8936170212765957
+            }
+          },
+          "al": {
+            "0": {
+              "count": 197,
+              "positive_rate": 0.26903553299492383
+            },
+            "1": {
+              "count": 44,
+              "positive_rate": 1.0
+            },
+            "2": {
+              "count": 43,
+              "positive_rate": 1.0
+            },
+            "3": {
+              "count": 42,
+              "positive_rate": 1.0
+            },
+            "4": {
+              "count": 24,
+              "positive_rate": 1.0
+            },
+            "5": {
+              "count": 1,
+              "positive_rate": 1.0
+            },
+            "<missing>": {
+              "count": 46,
+              "positive_rate": 0.8913043478260869
+            }
+          },
+          "su": {
+            "0": {
+              "count": 289,
+              "positive_rate": 0.5017301038062284
+            },
+            "1": {
+              "count": 13,
+              "positive_rate": 1.0
+            },
+            "2": {
+              "count": 18,
+              "positive_rate": 1.0
+            },
+            "3": {
+              "count": 13,
+              "positive_rate": 1.0
+            },
+            "4": {
+              "count": 12,
+              "positive_rate": 1.0
+            },
+            "5": {
+              "count": 3,
+              "positive_rate": 1.0
+            },
+            "<missing>": {
+              "count": 49,
+              "positive_rate": 0.8979591836734694
+            }
+          },
+          "rbc": {
+            "<missing>": {
+              "count": 150,
+              "positive_rate": 0.94
+            },
+            "abnormal": {
+              "count": 47,
+              "positive_rate": 1.0
+            },
+            "normal": {
+              "count": 200,
+              "positive_rate": 0.3
+            }
+          },
+          "pc": {
+            "<missing>": {
+              "count": 65,
+              "positive_rate": 0.8615384615384616
+            },
+            "abnormal": {
+              "count": 75,
+              "positive_rate": 1.0
+            },
+            "normal": {
+              "count": 257,
+              "positive_rate": 0.45525291828793774
+            }
+          },
+          "pcc": {
+            "<missing>": {
+              "count": 4,
+              "positive_rate": 0.0
+            },
+            "notpresent": {
+              "count": 352,
+              "positive_rate": 0.5880681818181818
+            },
+            "present": {
+              "count": 41,
+              "positive_rate": 1.0
+            }
+          },
+          "ba": {
+            "<missing>": {
+              "count": 4,
+              "positive_rate": 0.0
+            },
+            "notpresent": {
+              "count": 371,
+              "positive_rate": 0.6091644204851752
+            },
+            "present": {
+              "count": 22,
+              "positive_rate": 1.0
+            }
+          },
+          "htn": {
+            "<missing>": {
+              "count": 2,
+              "positive_rate": 0.0
+            },
+            "no": {
+              "count": 249,
+              "positive_rate": 0.40963855421686746
+            },
+            "yes": {
+              "count": 146,
+              "positive_rate": 1.0
+            }
+          },
+          "dm": {
+            "\tno": {
+              "count": 3,
+              "positive_rate": 1.0
+            },
+            "\tyes": {
+              "count": 2,
+              "positive_rate": 1.0
+            },
+            " yes": {
+              "count": 1,
+              "positive_rate": 1.0
+            },
+            "<missing>": {
+              "count": 2,
+              "positive_rate": 0.0
+            },
+            "no": {
+              "count": 257,
+              "positive_rate": 0.4280155642023346
+            },
+            "yes": {
+              "count": 132,
+              "positive_rate": 1.0
+            }
+          },
+          "cad": {
+            "\tno": {
+              "count": 2,
+              "positive_rate": 1.0
+            },
+            "<missing>": {
+              "count": 2,
+              "positive_rate": 0.0
+            },
+            "no": {
+              "count": 359,
+              "positive_rate": 0.5905292479108635
+            },
+            "yes": {
+              "count": 34,
+              "positive_rate": 1.0
+            }
+          },
+          "appet": {
+            "<missing>": {
+              "count": 1,
+              "positive_rate": 0.0
+            },
+            "good": {
+              "count": 314,
+              "positive_rate": 0.5286624203821656
+            },
+            "poor": {
+              "count": 82,
+              "positive_rate": 1.0
+            }
+          },
+          "pe": {
+            "<missing>": {
+              "count": 1,
+              "positive_rate": 0.0
+            },
+            "no": {
+              "count": 321,
+              "positive_rate": 0.5389408099688473
+            },
+            "yes": {
+              "count": 75,
+              "positive_rate": 1.0
+            }
+          },
+          "ane": {
+            "<missing>": {
+              "count": 1,
+              "positive_rate": 0.0
+            },
+            "no": {
+              "count": 336,
+              "positive_rate": 0.5595238095238095
+            },
+            "yes": {
+              "count": 60,
+              "positive_rate": 1.0
+            }
+          }
+        },
+        "split_feature_overlap_seed_42": 0,
+        "malformed_policy": "Three records with 26 fields were excluded; no valid inclusion/repair sensitivity alternative exists without deciding how the shifted row should be interpreted."
+      }
+    }
+  }
+}

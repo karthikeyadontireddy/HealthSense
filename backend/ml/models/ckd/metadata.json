@@ -1,0 +1,269 @@
+{
+  "disease_id": "chronic_kidney_disease",
+  "display_name": "Chronic Kidney Disease Risk",
+  "dataset_name": "Early stage of Indians Chronic Kidney Disease",
+  "dataset_source": "backend/datasets/ckd/original/chronic_kidney_disease.arff",
+  "target": "class_binary",
+  "feature_names": [
+    "age",
+    "bp",
+    "bgr",
+    "bu",
+    "sc",
+    "sod",
+    "pot",
+    "hemo",
+    "pcv",
+    "wbcc",
+    "rbcc",
+    "sg",
+    "al",
+    "su",
+    "rbc",
+    "pc",
+    "pcc",
+    "ba",
+    "htn",
+    "dm",
+    "cad",
+    "appet",
+    "pe",
+    "ane"
+  ],
+  "numeric_features": [
+    "age",
+    "bp",
+    "bgr",
+    "bu",
+    "sc",
+    "sod",
+    "pot",
+    "hemo",
+    "pcv",
+    "wbcc",
+    "rbcc"
+  ],
+  "categorical_features": [
+    "sg",
+    "al",
+    "su",
+    "rbc",
+    "pc",
+    "pcc",
+    "ba",
+    "htn",
+    "dm",
+    "cad",
+    "appet",
+    "pe",
+    "ane"
+  ],
+  "task_type": "binary classification",
+  "preprocessing": "Literal ? values become missing; median numeric imputation and most-frequent categorical imputation plus one-hot encoding are fitted on training data.",
+  "dataset_policy": "Deterministically selected chronic_kidney_disease.arff because both preserved candidates had identical research-relevant content during Phase 4 analysis. Rows with field counts other than 25 are rejected, not repaired or silently shifted. Rejected rows: 3; resulting dataset size: 397.",
+  "model_name": "Random Forest",
+  "model_version": "research_v1",
+  "training_date": "2026-09-07T07:54:06.612244+00:00",
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_splits": 5,
+  "training_sample_count": 317,
+  "test_sample_count": 80,
+  "dataset_sample_count_after_policy": 397,
+  "dropped_rows": [
+    {
+      "line": 99,
+      "field_count": 26,
+      "reason": "field count differs from 25 declared attributes"
+    },
+    {
+      "line": 102,
+      "field_count": 26,
+      "reason": "field count differs from 25 declared attributes"
+    },
+    {
+      "line": 399,
+      "field_count": 26,
+      "reason": "field count differs from 25 declared attributes"
+    }
+  ],
+  "model_comparison": [
+    {
+      "model_name": "logistic_regression",
+      "cv_mean": {
+        "accuracy": 0.9875,
+        "precision": 1.0,
+        "recall": 0.9800000000000001,
+        "f1": 0.9894736842105264,
+        "roc_auc": 0.9995833333333334
+      },
+      "cv_std": {
+        "accuracy": 0.024999999999999998,
+        "precision": 0.0,
+        "recall": 0.03999999999999999,
+        "f1": 0.02105263157894739,
+        "roc_auc": 0.0008333333333333747
+      }
+    },
+    {
+      "model_name": "random_forest",
+      "cv_mean": {
+        "accuracy": 0.990625,
+        "precision": 0.9901219512195123,
+        "recall": 0.9949999999999999,
+        "f1": 0.992530864197531,
+        "roc_auc": 0.9995833333333334
+      },
+      "cv_std": {
+        "accuracy": 0.012499999999999999,
+        "precision": 0.01209962610225607,
+        "recall": 0.010000000000000009,
+        "f1": 0.009984746787948532,
+        "roc_auc": 0.0008333333333333304
+      }
+    },
+    {
+      "model_name": "gradient_boosting",
+      "cv_mean": {
+        "accuracy": 0.9780257936507937,
+        "precision": 0.9807200929152149,
+        "recall": 0.9848717948717949,
+        "f1": 0.9825854956450819,
+        "roc_auc": 0.9979166666666666
+      },
+      "cv_std": {
+        "accuracy": 0.01589594078639275,
+        "precision": 0.023615823511523987,
+        "recall": 0.012354345340150372,
+        "f1": 0.012483545482316389,
+        "roc_auc": 0.003227486121839503
+      }
+    }
+  ],
+  "evaluation_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "confusion_matrix": [
+      [
+        30,
+        0
+      ],
+      [
+        0,
+        50
+      ]
+    ],
+    "roc_auc": 1.0
+  },
+  "feature_importance": [
+    {
+      "feature": "numeric__hemo",
+      "importance": 0.19384296573287907,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__sc",
+      "importance": 0.1350547444160546,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__pcv",
+      "importance": 0.13427836391645176,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__al_0",
+      "importance": 0.07300976103841482,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__rbcc",
+      "importance": 0.07295583052835998,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__htn_yes",
+      "importance": 0.05432015819876188,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__htn_no",
+      "importance": 0.03896158515764671,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__dm_no",
+      "importance": 0.03230217424974157,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__dm_yes",
+      "importance": 0.030934065409481425,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__bgr",
+      "importance": 0.030480142964358775,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__bu",
+      "importance": 0.028279437193411815,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__sg_1.010",
+      "importance": 0.023934093024572722,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__sg_1.015",
+      "importance": 0.018928768510767646,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__sod",
+      "importance": 0.018710062335086628,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__sg_1.025",
+      "importance": 0.010534608407108348,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__age",
+      "importance": 0.009148192893169663,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "numeric__bp",
+      "importance": 0.008870183009361472,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__pc_normal",
+      "importance": 0.008325666226659372,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__sg_1.020",
+      "importance": 0.007513110196815647,
+      "method": "feature_importances_"
+    },
+    {
+      "feature": "categorical__appet_good",
+      "importance": 0.007125332235865753,
+      "method": "feature_importances_"
+    }
+  ],
+  "limitations": [
+    "Small public dataset",
+    "Three malformed source rows were rejected under an explicit width-validation policy",
+    "Target-count discrepancy in source documentation requires provenance follow-up",
+    "No external validation",
+    "Model probability calibration was not evaluated"
+  ]
+}

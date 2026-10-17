@@ -1,0 +1,230 @@
+{
+  "disease_id": "heart_disease",
+  "display_name": "Heart Disease Risk",
+  "dataset_name": "UCI Heart Disease Cleveland subset",
+  "dataset_source": "backend/datasets/heart/original/processed.cleveland.data",
+  "target": "num_binary",
+  "feature_names": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "numeric_features": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalach",
+    "oldpeak"
+  ],
+  "categorical_features": [
+    "sex",
+    "cp",
+    "fbs",
+    "restecg",
+    "exang",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "task_type": "binary classification",
+  "preprocessing": "Literal ? values become missing; median imputation is fitted on training data for numeric fields and most-frequent imputation plus one-hot encoding is fitted on training data for coded categorical fields.",
+  "dataset_policy": "Original target num is documented as 0 versus 1-4. Training uses the deliberate binary mapping num=0 -> 0 and num=1,2,3,4 -> 1.",
+  "model_name": "Logistic Regression",
+  "model_version": "research_v1",
+  "training_date": "2026-09-07T07:53:59.799324+00:00",
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_splits": 5,
+  "training_sample_count": 242,
+  "test_sample_count": 61,
+  "dataset_sample_count_after_policy": 303,
+  "dropped_rows": [],
+  "model_comparison": [
+    {
+      "model_name": "logistic_regression",
+      "cv_mean": {
+        "accuracy": 0.8551870748299321,
+        "precision": 0.8730744935655421,
+        "recall": 0.8098814229249012,
+        "f1": 0.8365444245676803,
+        "roc_auc": 0.9024779568257829
+      },
+      "cv_std": {
+        "accuracy": 0.023767881465657423,
+        "precision": 0.062069878232006284,
+        "recall": 0.061619526545154374,
+        "f1": 0.02550620767591018,
+        "roc_auc": 0.014803685378876278
+      }
+    },
+    {
+      "model_name": "random_forest",
+      "cv_mean": {
+        "accuracy": 0.8016156462585033,
+        "precision": 0.7788378288378289,
+        "recall": 0.800790513833992,
+        "f1": 0.7855127886249638,
+        "roc_auc": 0.8985059626363974
+      },
+      "cv_std": {
+        "accuracy": 0.021454201279861373,
+        "precision": 0.039866398773502426,
+        "recall": 0.0853370576632106,
+        "f1": 0.03322486150975345,
+        "roc_auc": 0.028577874328824315
+      }
+    },
+    {
+      "model_name": "gradient_boosting",
+      "cv_mean": {
+        "accuracy": 0.8017006802721088,
+        "precision": 0.7789092295957285,
+        "recall": 0.7924901185770751,
+        "f1": 0.7843720934896675,
+        "roc_auc": 0.8583685235859149
+      },
+      "cv_std": {
+        "accuracy": 0.024371703652275555,
+        "precision": 0.020165072122028716,
+        "recall": 0.062433079047159376,
+        "f1": 0.035131188817475595,
+        "roc_auc": 0.013467851686034442
+      }
+    }
+  ],
+  "evaluation_metrics": {
+    "accuracy": 0.8688524590163934,
+    "precision": 0.8125,
+    "recall": 0.9285714285714286,
+    "f1": 0.8666666666666667,
+    "confusion_matrix": [
+      [
+        27,
+        6
+      ],
+      [
+        2,
+        26
+      ]
+    ],
+    "roc_auc": 0.9664502164502166
+  },
+  "feature_importance": [
+    {
+      "feature": "categorical__ca_0.0",
+      "importance": 1.4882624243190015,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__cp_4.0",
+      "importance": 1.0351585228948361,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__thal_7.0",
+      "importance": 0.8263389605104631,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__sex_1.0",
+      "importance": 0.7116353549046854,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__sex_0.0",
+      "importance": 0.6983575260408557,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__ca_2.0",
+      "importance": 0.6548504511290956,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__slope_2.0",
+      "importance": 0.6042076248808965,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__cp_1.0",
+      "importance": 0.5927384821056921,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__cp_3.0",
+      "importance": 0.5720246136782089,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__thal_3.0",
+      "importance": 0.522496149221921,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__ca_3.0",
+      "importance": 0.49997202616969516,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__slope_1.0",
+      "importance": 0.42655820751601825,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__thalach",
+      "importance": 0.38954948397522665,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__ca_1.0",
+      "importance": 0.3467177758840403,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__trestbps",
+      "importance": 0.34268366912694953,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__thal_6.0",
+      "importance": 0.290564982424712,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__exang_1.0",
+      "importance": 0.26729772441357813,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__exang_0.0",
+      "importance": 0.2540198955497479,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__oldpeak",
+      "importance": 0.24649114911603906,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "categorical__restecg_2.0",
+      "importance": 0.21903160560420795,
+      "method": "absolute_coefficients"
+    }
+  ],
+  "limitations": [
+    "Small single-site subset",
+    "Binary target transformation is a research choice",
+    "No clinical validation",
+    "Model probability calibration was not evaluated"
+  ]
+}

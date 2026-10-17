@@ -1,0 +1,139 @@
+{
+  "disease_id": "diabetes",
+  "display_name": "Diabetes Risk",
+  "dataset_name": "Plotly diabetes dataset",
+  "dataset_source": "https://raw.githubusercontent.com/plotly/datasets/master/diabetes.csv",
+  "target": "Outcome",
+  "feature_names": [
+    "Glucose",
+    "BloodPressure",
+    "Insulin",
+    "BMI",
+    "Age"
+  ],
+  "numeric_features": [
+    "Glucose",
+    "BloodPressure",
+    "Insulin",
+    "BMI",
+    "Age"
+  ],
+  "categorical_features": [],
+  "task_type": "binary classification",
+  "preprocessing": "Selected zero-coded clinical measurements are treated as missing; median imputation is fitted on training data. Logistic Regression receives StandardScaler; tree models do not.",
+  "dataset_policy": "Original remote CSV is read-only. Zero is treated as missing only for Glucose, BloodPressure, SkinThickness, Insulin, and BMI; zero Pregnancies is retained.",
+  "model_name": "Logistic Regression",
+  "model_version": "research_v1",
+  "training_date": "2026-09-07T07:53:53.662116+00:00",
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_splits": 5,
+  "training_sample_count": 614,
+  "test_sample_count": 154,
+  "dataset_sample_count_after_policy": 768,
+  "dropped_rows": [],
+  "model_comparison": [
+    {
+      "model_name": "logistic_regression",
+      "cv_mean": {
+        "accuracy": 0.7524190323870452,
+        "precision": 0.6308547008547009,
+        "recall": 0.7008859357696566,
+        "f1": 0.6635258308942519,
+        "roc_auc": 0.8331589147286822
+      },
+      "cv_std": {
+        "accuracy": 0.013650008579601918,
+        "precision": 0.022507557516803032,
+        "recall": 0.03120173462946286,
+        "f1": 0.019267965257729433,
+        "roc_auc": 0.019595447982521833
+      }
+    },
+    {
+      "model_name": "random_forest",
+      "cv_mean": {
+        "accuracy": 0.7540317206450753,
+        "precision": 0.6427688456724752,
+        "recall": 0.6774086378737542,
+        "f1": 0.6583243200937312,
+        "roc_auc": 0.8125975913621263
+      },
+      "cv_std": {
+        "accuracy": 0.03050098073033456,
+        "precision": 0.05656184341212951,
+        "recall": 0.028970404460586865,
+        "f1": 0.03368543821076322,
+        "roc_auc": 0.02989011828360745
+      }
+    },
+    {
+      "model_name": "gradient_boosting",
+      "cv_mean": {
+        "accuracy": 0.760575769692123,
+        "precision": 0.6770099667774085,
+        "recall": 0.607530454042082,
+        "f1": 0.6392503299992588,
+        "roc_auc": 0.8194407530454042
+      },
+      "cv_std": {
+        "accuracy": 0.022863736071109208,
+        "precision": 0.05071650286300043,
+        "recall": 0.0261182068987959,
+        "f1": 0.02720954143011377,
+        "roc_auc": 0.028394091597986285
+      }
+    }
+  ],
+  "evaluation_metrics": {
+    "accuracy": 0.6948051948051948,
+    "precision": 0.559322033898305,
+    "recall": 0.6111111111111112,
+    "f1": 0.584070796460177,
+    "confusion_matrix": [
+      [
+        74,
+        26
+      ],
+      [
+        21,
+        33
+      ]
+    ],
+    "roc_auc": 0.7857407407407407
+  },
+  "feature_importance": [
+    {
+      "feature": "numeric__Glucose",
+      "importance": 1.1568509611320976,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__BMI",
+      "importance": 0.7238567946794019,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__Age",
+      "importance": 0.3722080796976981,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__Insulin",
+      "importance": 0.014345708166543151,
+      "method": "absolute_coefficients"
+    },
+    {
+      "feature": "numeric__BloodPressure",
+      "importance": 0.01109827696089227,
+      "method": "absolute_coefficients"
+    }
+  ],
+  "limitations": [
+    "Single public dataset",
+    "No external validation",
+    "Zero-coded values are a dataset convention requiring sensitivity analysis",
+    "Model probability calibration was not evaluated",
+    "HbA1c is not present in the source dataset"
+  ]
+}

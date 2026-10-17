@@ -1,0 +1,290 @@
+{
+  "disease_id": "diabetes",
+  "model_version": "research_v2_candidate",
+  "activation_status": "not_active",
+  "candidate_id": "all_8__zero_as_missing__mean__logistic__balanced__c0_1",
+  "feature_names": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "zero_policy": "zero_as_missing",
+  "imputation": "mean",
+  "model_name": "logistic_regression",
+  "class_weight": "balanced",
+  "scale_numeric": true,
+  "hyperparameters": {
+    "C": 0.1
+  },
+  "training_sample_count": 614,
+  "test_sample_count": 154,
+  "selection_protocol": {
+    "selection_seed": 42,
+    "test_size": 0.2,
+    "cv_splits": 5,
+    "robustness_seeds": [
+      42,
+      7,
+      21,
+      100,
+      2026
+    ],
+    "test_isolated_before_selection": true,
+    "smote_used": false
+  },
+  "cv_metrics": {
+    "folds": [
+      {
+        "accuracy": 0.7723577235772358,
+        "precision": 0.6666666666666666,
+        "recall": 0.6976744186046512,
+        "f1": 0.6818181818181818,
+        "roc_auc": 0.8630813953488371,
+        "brier_score": 0.14972932688975304,
+        "confusion_matrix": [
+          [
+            65,
+            15
+          ],
+          [
+            13,
+            30
+          ]
+        ],
+        "fold": 1
+      },
+      {
+        "accuracy": 0.7560975609756098,
+        "precision": 0.6226415094339622,
+        "recall": 0.7674418604651163,
+        "f1": 0.6875,
+        "roc_auc": 0.8406976744186047,
+        "brier_score": 0.16599051674759346,
+        "confusion_matrix": [
+          [
+            60,
+            20
+          ],
+          [
+            10,
+            33
+          ]
+        ],
+        "fold": 2
+      },
+      {
+        "accuracy": 0.7723577235772358,
+        "precision": 0.6923076923076923,
+        "recall": 0.627906976744186,
+        "f1": 0.6585365853658537,
+        "roc_auc": 0.8523255813953488,
+        "brier_score": 0.14791591968869247,
+        "confusion_matrix": [
+          [
+            68,
+            12
+          ],
+          [
+            16,
+            27
+          ]
+        ],
+        "fold": 3
+      },
+      {
+        "accuracy": 0.7723577235772358,
+        "precision": 0.6595744680851063,
+        "recall": 0.7209302325581395,
+        "f1": 0.6888888888888889,
+        "roc_auc": 0.8482558139534884,
+        "brier_score": 0.1605564139931543,
+        "confusion_matrix": [
+          [
+            64,
+            16
+          ],
+          [
+            12,
+            31
+          ]
+        ],
+        "fold": 4
+      },
+      {
+        "accuracy": 0.7704918032786885,
+        "precision": 0.64,
+        "recall": 0.7619047619047619,
+        "f1": 0.6956521739130435,
+        "roc_auc": 0.8264880952380952,
+        "brier_score": 0.1760664344277148,
+        "confusion_matrix": [
+          [
+            62,
+            18
+          ],
+          [
+            10,
+            32
+          ]
+        ],
+        "fold": 5
+      }
+    ],
+    "mean": {
+      "accuracy": 0.7687325069972012,
+      "precision": 0.6562380672986856,
+      "recall": 0.715171650055371,
+      "f1": 0.6824791659971935,
+      "roc_auc": 0.8461697120708749,
+      "brier_score": 0.1600517223493816
+    },
+    "std": {
+      "accuracy": 0.0071092118081236095,
+      "precision": 0.02652031595414255,
+      "recall": 0.056724325091612605,
+      "f1": 0.014261009138173039,
+      "roc_auc": 0.013652479781334314,
+      "brier_score": 0.011681444150399251
+    }
+  },
+  "held_out_metrics": {
+    "accuracy": 0.7077922077922078,
+    "precision": 0.5714285714285714,
+    "recall": 0.6666666666666666,
+    "f1": 0.6153846153846154,
+    "roc_auc": 0.8099999999999999,
+    "brier_score": 0.18138990984019795,
+    "confusion_matrix": [
+      [
+        73,
+        27
+      ],
+      [
+        18,
+        36
+      ]
+    ]
+  },
+  "robustness_metrics": {
+    "per_seed": [
+      {
+        "seed": 42,
+        "accuracy": 0.7077922077922078,
+        "precision": 0.5714285714285714,
+        "recall": 0.6666666666666666,
+        "f1": 0.6153846153846154,
+        "roc_auc": 0.8099999999999999,
+        "brier_score": 0.18138990984019795,
+        "confusion_matrix": [
+          [
+            73,
+            27
+          ],
+          [
+            18,
+            36
+          ]
+        ]
+      },
+      {
+        "seed": 7,
+        "accuracy": 0.7532467532467533,
+        "precision": 0.6333333333333333,
+        "recall": 0.7037037037037037,
+        "f1": 0.6666666666666666,
+        "roc_auc": 0.8462962962962963,
+        "brier_score": 0.15893515568278507,
+        "confusion_matrix": [
+          [
+            78,
+            22
+          ],
+          [
+            16,
+            38
+          ]
+        ]
+      },
+      {
+        "seed": 21,
+        "accuracy": 0.7337662337662337,
+        "precision": 0.6274509803921569,
+        "recall": 0.5925925925925926,
+        "f1": 0.6095238095238096,
+        "roc_auc": 0.8283333333333333,
+        "brier_score": 0.16733123677308898,
+        "confusion_matrix": [
+          [
+            81,
+            19
+          ],
+          [
+            22,
+            32
+          ]
+        ]
+      },
+      {
+        "seed": 100,
+        "accuracy": 0.7727272727272727,
+        "precision": 0.6666666666666666,
+        "recall": 0.7037037037037037,
+        "f1": 0.6846846846846847,
+        "roc_auc": 0.8527777777777777,
+        "brier_score": 0.1591702146862891,
+        "confusion_matrix": [
+          [
+            81,
+            19
+          ],
+          [
+            16,
+            38
+          ]
+        ]
+      },
+      {
+        "seed": 2026,
+        "accuracy": 0.6883116883116883,
+        "precision": 0.5483870967741935,
+        "recall": 0.6296296296296297,
+        "f1": 0.5862068965517241,
+        "roc_auc": 0.7714814814814814,
+        "brier_score": 0.1965027003496812,
+        "confusion_matrix": [
+          [
+            72,
+            28
+          ],
+          [
+            20,
+            34
+          ]
+        ]
+      }
+    ],
+    "mean": {
+      "accuracy": 0.7311688311688311,
+      "precision": 0.6094533297189844,
+      "recall": 0.6592592592592592,
+      "f1": 0.6324933345623001,
+      "roc_auc": 0.8217777777777776,
+      "brier_score": 0.17266584346640848
+    },
+    "std": {
+      "accuracy": 0.03392818305873541,
+      "precision": 0.04832831203387844,
+      "recall": 0.0482903881866863,
+      "f1": 0.04139593986979362,
+      "roc_auc": 0.03268626060553753,
+      "brier_score": 0.016151059500249906
+    }
+  },
+  "source_dataset": "https://raw.githubusercontent.com/plotly/datasets/master/diabetes.csv",
+  "note": "Candidate artifact prepared for review only. It is not loaded by the API and does not replace research_v1."
+}
