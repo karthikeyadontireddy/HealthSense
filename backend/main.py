@@ -60,7 +60,10 @@ def ensure_default_demo_user():
         db.close()
 
 
-ensure_default_demo_user()
+import os
+
+if os.getenv("ENVIRONMENT", "development").lower() != "production":
+    ensure_default_demo_user()
 
 app = FastAPI(
     title="HealthSense",
